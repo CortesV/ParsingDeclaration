@@ -17,17 +17,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class DeclarantRegisteredAddress {
 
 	private static final int LENGHT = 4;
-	private static final String SUCCESSFUL_RESPONSE_STATUS = "Successful";
 
 	private String city;
 	private String district;
 	private String region;
 	private String country;
-	private String responseStatus;
 
-	public DeclarantRegisteredAddress(String responseStatus) {
-		this.responseStatus = responseStatus;
-	}
 
 	/***
 	 * Constructor with parameters that receive list with address of official
@@ -46,7 +41,7 @@ public class DeclarantRegisteredAddress {
 		this.district = valuesOfRegisterAddress.get(1);
 		this.region = valuesOfRegisterAddress.get(2);
 		this.country = valuesOfRegisterAddress.get(3);
-		this.responseStatus = SUCCESSFUL_RESPONSE_STATUS;
+
 	}
 
 	public String getCity() {
@@ -79,14 +74,6 @@ public class DeclarantRegisteredAddress {
 
 	public void setCountry(String country) {
 		this.country = country;
-	}
-
-	public String getResponseStatus() {
-		return responseStatus;
-	}
-
-	public void setResponseStatus(String responseStatus) {
-		this.responseStatus = responseStatus;
 	}
 
 }
